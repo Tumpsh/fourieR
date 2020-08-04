@@ -1,12 +1,16 @@
 Package: fourieR
-Title: What the Package Does (One Line, Title Case)
+Title: Compute Fourier Transform Analyses for a Signal
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Thomas",
            family = "Corey",
            role = c("aut", "cre"),
            email = "tomas.a.corey@gmail.com")
-Description: What the package does (one paragraph).
-License: What license it uses
+Description: fourieR provides tools for computing the fourier transform of an
+  input signal, as well as recommended visualizations and analysis of peak
+  frequencies.
+Depends: R (>= 3.5)
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.0.2
