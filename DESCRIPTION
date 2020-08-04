@@ -10,6 +10,8 @@ Description: fourieR provides tools for computing the fourier transform of an
   input signal, as well as recommended visualizations and analysis of peak
   frequencies.
 Depends: R (>= 3.5)
+Suggests:
+  tuneR
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
