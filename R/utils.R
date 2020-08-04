@@ -25,9 +25,10 @@
 #' peak_freqs <- get_peaks(wave_freq$amp)
 #' cleaned_wave_form <- inverse_dft(wave_freq[peak_freqs, ], 3,
 #'                                  audio_wave@@samp.rate)
-#' cleaned_mp3 <- Wave(cleaned_wave_form, cleaned_wave_form,
+#' cleaned_wave <- Wave(cleaned_wave_form, cleaned_wave_form,
 #'                     audio_wave@@samp.rate)
-#' ## writeWave(cleaned_mp3, "cleaned_wav.wav")
+#' ## writeWave(cleaned_wave, "cleaned_wav.wav")
+#' ## writeWave(audio_wave, "original_wav.wav")
 dft <- function(data, freq_seq = NULL, sampling_rate = NULL) {
   n <- length(data)
   if (is.null(freq_seq)) {
@@ -110,9 +111,10 @@ get_peaks <- function(data, decline = 0.3, window = 15) {
 #' peak_freqs <- get_peaks(wave_freq$amp)
 #' cleaned_wave_form <- inverse_dft(wave_freq[peak_freqs, ], 3,
 #'                                  audio_wave@@samp.rate)
-#' cleaned_mp3 <- Wave(cleaned_wave_form, cleaned_wave_form,
+#' cleaned_wave <- Wave(cleaned_wave_form, cleaned_wave_form,
 #'                     audio_wave@@samp.rate)
-#' ## writeWave(cleaned_mp3, "cleaned_wav.wav")
+#' ## writeWave(cleaned_wave, "cleaned_wav.wav")
+#' ## writeWave(audio_wave, "original_wav.wav")
 inverse_dft <- function(freq_data, len, sampling_rate = NULL) {
   samples <- 1:round(len * ifelse(is.null(sampling_rate), 1, sampling_rate))
   res <- rep(0, length(samples))

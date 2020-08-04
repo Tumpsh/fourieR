@@ -36,7 +36,8 @@ wave_freq <- dft(wave_form, freq_seq = 1:2000,
 peak_freqs <- get_peaks(wave_freq$amp)
 cleaned_wave_form <- inverse_dft(wave_freq[peak_freqs, ], 3,
                                  audio_wave@samp.rate)
-cleaned_mp3 <- Wave(cleaned_wave_form, cleaned_wave_form,
+cleaned_wave <- Wave(cleaned_wave_form, cleaned_wave_form,
                     audio_wave@samp.rate)
-## writeWave(cleaned_mp3, "cleaned_wav.wav")
+## writeWave(cleaned_wave, "cleaned_wav.wav")
+## writeWave(audio_wave, "original_wav.wav")
 }
